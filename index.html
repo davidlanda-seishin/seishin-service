@@ -4,377 +4,488 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>合同会社 誠心サービス | Seishin Service LLC</title>
-  <meta name="description" content="合同会社 誠心サービスは、溶接、鉄骨工事、工場メンテナンス、業務請負、リフォーム・解体サポートを行う日本の産業サービス会社です。" />
+  <meta name="description" content="合同会社 誠心サービス | Seishin Service LLC - Industrial support, welding, steel structure work, maintenance and staffing support in Japan." />
+
   <style>
-    :root {
-      --blue: #0b2d4d;
-      --steel: #5d6b78;
-      --light: #f4f7fa;
-      --dark: #111827;
-      --accent: #f5a623;
-      --white: #ffffff;
+    :root{
+      --blue:#082d4d;
+      --steel:#5d6b78;
+      --light:#f4f7fa;
+      --dark:#111827;
+      --accent:#f5a623;
+      --white:#ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      color:var(--dark);
+      background:var(--white);
+      line-height:1.7;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      line-height: 1.7;
+    header{
+      background:var(--blue);
+      color:var(--white);
+      padding:18px 20px;
+      position:sticky;
+      top:0;
+      z-index:10;
     }
 
-    header {
-      background: var(--blue);
-      color: var(--white);
-      padding: 18px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
+    .logo{
+      font-weight:800;
+      font-size:18px;
+      letter-spacing:.5px;
     }
 
-    .logo {
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: 0.5px;
+    .nav a{
+      color:var(--white);
+      text-decoration:none;
+      font-size:14px;
+      margin-left:12px;
     }
 
-    .nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 14px;
-      margin-left: 14px;
+    .lang{
+      max-width:1100px;
+      margin:12px auto 0;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
     }
 
-    .hero {
-      background: linear-gradient(rgba(11,45,77,0.86), rgba(11,45,77,0.86)),
-      url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      padding: 95px 20px;
-      text-align: center;
+    .lang button{
+      border:1px solid rgba(255,255,255,.4);
+      background:transparent;
+      color:white;
+      padding:6px 10px;
+      border-radius:20px;
+      font-size:13px;
     }
 
-    .hero h1 {
-      font-size: 38px;
-      line-height: 1.25;
-      margin-bottom: 18px;
+    .lang button.active{
+      background:var(--accent);
+      color:#1f2937;
+      border-color:var(--accent);
+      font-weight:700;
     }
 
-    .hero p {
-      max-width: 780px;
-      margin: 0 auto 28px;
-      font-size: 18px;
+    .hero{
+      background:
+        linear-gradient(rgba(8,45,77,.86),rgba(8,45,77,.86)),
+        url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+      background-size:cover;
+      background-position:center;
+      color:white;
+      padding:100px 20px;
+      text-align:center;
     }
 
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #1f2937;
-      padding: 13px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 6px;
+    .hero h1{
+      font-size:38px;
+      line-height:1.25;
+      margin-bottom:18px;
     }
 
-    .btn.secondary {
-      background: transparent;
-      color: var(--white);
-      border: 1px solid var(--white);
+    .hero p{
+      max-width:850px;
+      margin:0 auto 28px;
+      font-size:18px;
     }
 
-    section {
-      padding: 70px 20px;
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#1f2937;
+      padding:13px 24px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:800;
+      margin:6px;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
+    .btn.secondary{
+      background:transparent;
+      color:white;
+      border:1px solid white;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 38px;
+    section{
+      padding:70px 20px;
     }
 
-    .section-title h2 {
-      color: var(--blue);
-      font-size: 30px;
-      margin-bottom: 8px;
+    .container{
+      max-width:1100px;
+      margin:auto;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+    .title{
+      text-align:center;
+      margin-bottom:38px;
     }
 
-    .card {
-      background: var(--white);
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 26px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    .title h2{
+      color:var(--blue);
+      font-size:30px;
+      margin-bottom:8px;
     }
 
-    .card h3 {
-      color: var(--blue);
-      margin-bottom: 10px;
-      font-size: 20px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
     }
 
-    .light {
-      background: var(--light);
+    .card{
+      background:white;
+      border:1px solid #e5e7eb;
+      border-radius:10px;
+      padding:26px;
+      box-shadow:0 8px 24px rgba(0,0,0,.06);
     }
 
-    .about {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 35px;
-      align-items: center;
+    .card h3{
+      color:var(--blue);
+      margin-bottom:10px;
+      font-size:20px;
     }
 
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--white);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    .light{
+      background:var(--light);
     }
 
-    .info-table th,
-    .info-table td {
-      border-bottom: 1px solid #e5e7eb;
-      padding: 13px 15px;
-      text-align: left;
-      vertical-align: top;
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:35px;
+      align-items:center;
     }
 
-    .info-table th {
-      width: 35%;
-      background: #eef3f8;
-      color: var(--blue);
+    .info-table{
+      width:100%;
+      border-collapse:collapse;
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.06);
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      text-align: center;
+    .info-table td{
+      padding:13px 15px;
+      border-bottom:1px solid #e5e7eb;
+      text-align:left;
     }
 
-    .feature {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 20px 12px;
-      border: 1px solid #e5e7eb;
-      font-weight: 700;
-      color: var(--blue);
+    .info-table td:first-child{
+      width:36%;
+      background:#eef3f8;
+      font-weight:700;
+      color:var(--blue);
     }
 
-    .contact-box {
-      background: var(--blue);
-      color: var(--white);
-      border-radius: 12px;
-      padding: 35px;
-      text-align: center;
+    .features{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      text-align:center;
     }
 
-    .contact-box a {
-      color: var(--white);
-      font-weight: 700;
+    .feature{
+      background:white;
+      border-radius:10px;
+      padding:20px 12px;
+      border:1px solid #e5e7eb;
+      font-weight:700;
+      color:var(--blue);
     }
 
-    footer {
-      background: #081f36;
-      color: var(--white);
-      text-align: center;
-      padding: 24px 20px;
-      font-size: 14px;
+    .contact-box{
+      background:var(--blue);
+      color:white;
+      border-radius:12px;
+      padding:35px;
+      text-align:center;
     }
 
-    @media (max-width: 850px) {
-      .nav {
-        flex-direction: column;
-      }
+    .contact-box a{
+      color:white;
+      font-weight:800;
+      text-decoration:none;
+    }
 
-      .nav a {
-        margin: 0 6px;
-      }
+    footer{
+      background:#081f36;
+      color:white;
+      text-align:center;
+      padding:24px 20px;
+      font-size:14px;
+    }
 
-      .hero h1 {
-        font-size: 29px;
-      }
+    .content{display:none}
+    .content.active{display:block}
 
-      .grid,
-      .about,
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 18px;
-      }
+    @media(max-width:800px){
+      .hero h1{font-size:29px}
+      .hero{padding:75px 18px}
+      .grid,.about,.features{grid-template-columns:1fr}
+      .nav{display:block}
+      .nav a{display:inline-block;margin:8px 10px 0 0}
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo">合同会社 誠心サービス</div>
-      <nav>
-        <a href="#services">サービス</a>
-        <a href="#about">会社概要</a>
-        <a href="#contact">お問い合わせ</a>
-      </nav>
+
+<header>
+  <div class="nav">
+    <div class="logo">合同会社 誠心サービス | SEISHIN SERVICE LLC</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">Company</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="lang">
+    <button onclick="setLang('ja')" id="btn-ja">日本語</button>
+    <button onclick="setLang('en')" id="btn-en">English</button>
+    <button onclick="setLang('es')" id="btn-es">Español</button>
+    <button onclick="setLang('pt')" id="btn-pt">Português</button>
+    <button onclick="setLang('th')" id="btn-th">ไทย</button>
+    <button onclick="setLang('vi')" id="btn-vi">Tiếng Việt</button>
+  </div>
+</header>
+
+<!-- JAPANESE -->
+<div class="content" id="ja">
+  <div class="hero">
+    <h1>品質と誠実さで支える<br>産業サポートサービス</h1>
+    <p>合同会社 誠心サービスは、溶接・鉄骨工事・工場サポート・産業メンテナンス・人材支援を通じて、日本国内の製造現場と建設現場を支援します。</p>
+    <a class="btn" href="mailto:info@seishin-service.jp">お問い合わせ</a>
+    <a class="btn secondary" href="#services">サービスを見る</a>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="title">
+        <h2>事業内容</h2>
+        <p>安全・品質・誠実な対応を大切にしています。</p>
+      </div>
+
+      <div class="grid">
+        <div class="card"><h3>溶接・鉄骨工事</h3><p>MIG・TIG溶接、鉄骨関連作業、金属加工、現場での技術サポート。</p></div>
+        <div class="card"><h3>工場サポート</h3><p>製造現場での作業補助、設備まわりの支援、作業効率向上のサポート。</p></div>
+        <div class="card"><h3>産業メンテナンス</h3><p>予防保全、修理対応、現場改善、設備関連のサポート。</p></div>
+        <div class="card"><h3>業務請負</h3><p>必要な作業を責任を持って請け負い、安定した現場運営を支援します。</p></div>
+        <div class="card"><h3>人材採用支援</h3><p>技術者・作業員の採用支援、候補者確認、現場に合う人材提案。</p></div>
+        <div class="card"><h3>建設・リフォーム支援</h3><p>内装・外装・補修・解体関連など、幅広い現場サポートに対応します。</p></div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero">
-      <h1>Industrial Support with Quality, Safety and Trust</h1>
-      <p>
-        合同会社 誠心サービスは、溶接・鉄骨工事・工場メンテナンス・業務請負を中心に、
-        日本国内の工場・建設現場・産業施設をサポートいたします。
-      </p>
-      <a class="btn" href="mailto:info@seishin-service.jp">お問い合わせ</a>
-      <a class="btn secondary" href="#services">サービスを見る</a>
-    </section>
-
-    <section id="services" class="light">
-      <div class="container">
-        <div class="section-title">
-          <h2>事業内容 / Services</h2>
-          <p>安全・品質・誠実な対応を大切に、現場に必要な技術と人材を提供します。</p>
-        </div>
-
-        <div class="grid">
-          <div class="card">
-            <h3>溶接工事</h3>
-            <p>工場・建設現場における溶接作業、補修、製作サポートを行います。</p>
-          </div>
-
-          <div class="card">
-            <h3>鉄骨工事</h3>
-            <p>鉄骨関連作業、組立、補強、現場サポートに対応します。</p>
-          </div>
-
-          <div class="card">
-            <h3>工場メンテナンス</h3>
-            <p>設備の保守、点検、修理補助など、工場運営を支えるサービスです。</p>
-          </div>
-
-          <div class="card">
-            <h3>業務請負</h3>
-            <p>現場の状況に応じた作業請負、技術スタッフのサポートを行います。</p>
-          </div>
-
-          <div class="card">
-            <h3>解体・リフォーム</h3>
-            <p>内装解体、改修、建物まわりの作業など幅広く対応します。</p>
-          </div>
-
-          <div class="card">
-            <h3>人材・採用支援</h3>
-            <p>産業現場に必要な人材確保や作業チーム構築をサポートします。</p>
-          </div>
-        </div>
+  <section class="light" id="about">
+    <div class="container about">
+      <div>
+        <h2>会社概要</h2>
+        <p>「誠心」とは、まごころ・誠実・責任を意味します。私たちは、お客様との信頼関係を大切にし、安全で品質の高いサービスを提供します。</p>
       </div>
-    </section>
+      <table class="info-table">
+        <tr><td>会社名</td><td>合同会社 誠心サービス</td></tr>
+        <tr><td>英語名</td><td>SEISHIN SERVICE LLC</td></tr>
+        <tr><td>所在地</td><td>栃木県・日本</td></tr>
+        <tr><td>対応言語</td><td>日本語・英語・スペイン語・ポルトガル語・タイ語・ベトナム語</td></tr>
+        <tr><td>メール</td><td>info@seishin-service.jp</td></tr>
+      </table>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="container about">
-        <div>
-          <div class="section-title" style="text-align:left;margin-bottom:20px;">
-            <h2>会社概要 / About Us</h2>
-          </div>
-          <p>
-            Seishin Service LLC is an industrial service company based in Japan.
-            We provide reliable support for welding, steel structures, maintenance,
-            workforce support, remodeling and demolition-related work.
-          </p>
-          <p style="margin-top:15px;">
-            私たちは「誠実・安全・品質」を大切にし、お客様の現場に信頼できるサービスを提供します。
-          </p>
-        </div>
-
-        <table class="info-table">
-          <tr>
-            <th>会社名</th>
-            <td>合同会社 誠心サービス</td>
-          </tr>
-          <tr>
-            <th>英語名</th>
-            <td>Seishin Service LLC</td>
-          </tr>
-          <tr>
-            <th>代表者</th>
-            <td>David Shinno</td>
-          </tr>
-          <tr>
-            <th>所在地</th>
-            <td>栃木県 / Tochigi, Japan</td>
-          </tr>
-          <tr>
-            <th>対応言語</th>
-            <td>日本語・Español・English</td>
-          </tr>
-          <tr>
-            <th>メール</th>
-            <td>info@seishin-service.jp</td>
-          </tr>
-        </table>
+  <section>
+    <div class="container">
+      <div class="features">
+        <div class="feature">安全第一</div>
+        <div class="feature">品質重視</div>
+        <div class="feature">誠実対応</div>
+        <div class="feature">多言語対応</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="light">
-      <div class="container">
-        <div class="section-title">
-          <h2>選ばれる理由 / Why Choose Us</h2>
-        </div>
-
-        <div class="features">
-          <div class="feature">安全第一</div>
-          <div class="feature">迅速対応</div>
-          <div class="feature">現場経験</div>
-          <div class="feature">品質重視</div>
-          <div class="feature">多言語対応</div>
-        </div>
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>お問い合わせ</h2>
+        <p>お仕事のご相談、人材サポート、工場・現場作業についてお気軽にご連絡ください。</p>
+        <p><a href="mailto:info@seishin-service.jp">info@seishin-service.jp</a></p>
       </div>
-    </section>
+    </div>
+  </section>
+</div>
 
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <h2>お問い合わせ / Contact</h2>
-          <p style="margin:15px 0;">
-            お見積り・業務依頼・ご相談は、下記メールアドレスまでお気軽にご連絡ください。
-          </p>
-          <p>📧 <a href="mailto:info@seishin-service.jp">info@seishin-service.jp</a></p>
-        </div>
+<!-- ENGLISH -->
+<div class="content" id="en">
+  <div class="hero">
+    <h1>Industrial Support<br>with Quality and Integrity</h1>
+    <p>Seishin Service LLC supports factories, construction sites and industrial projects in Japan through welding, steel structure work, maintenance and staffing support.</p>
+    <a class="btn" href="mailto:info@seishin-service.jp">Contact Us</a>
+    <a class="btn secondary" href="#services">View Services</a>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="title"><h2>Services</h2><p>Reliable support for industrial and construction environments.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Welding & Steel Work</h3><p>MIG/TIG welding, metal fabrication, steel structure support and technical field work.</p></div>
+        <div class="card"><h3>Factory Support</h3><p>Production assistance, operational support and industrial worksite support.</p></div>
+        <div class="card"><h3>Industrial Maintenance</h3><p>Preventive maintenance, repairs and improvement support for industrial facilities.</p></div>
+        <div class="card"><h3>Outsourcing</h3><p>Responsible subcontracted work for stable and efficient operations.</p></div>
+        <div class="card"><h3>Recruitment Support</h3><p>Support for hiring technicians, skilled workers and suitable candidates.</p></div>
+        <div class="card"><h3>Construction Support</h3><p>Interior, exterior, repair, demolition and site support services.</p></div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    © 2026 合同会社 誠心サービス / Seishin Service LLC. All Rights Reserved.
-  </footer>
+  <section class="light">
+    <div class="container about">
+      <div><h2>About Us</h2><p>“Seishin” means sincerity, dedication and responsibility. We aim to build long-term trust through safe, reliable and professional service.</p></div>
+      <table class="info-table">
+        <tr><td>Company</td><td>Seishin Service LLC</td></tr>
+        <tr><td>Japanese Name</td><td>合同会社 誠心サービス</td></tr>
+        <tr><td>Location</td><td>Tochigi, Japan</td></tr>
+        <tr><td>Email</td><td>info@seishin-service.jp</td></tr>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- SPANISH -->
+<div class="content" id="es">
+  <div class="hero">
+    <h1>Soporte Industrial<br>con Calidad y Compromiso</h1>
+    <p>Seishin Service LLC brinda apoyo a fábricas, obras y proyectos industriales en Japón mediante soldadura, estructuras metálicas, mantenimiento y soporte de personal.</p>
+    <a class="btn" href="mailto:info@seishin-service.jp">Contactar</a>
+    <a class="btn secondary" href="#services">Ver servicios</a>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="title"><h2>Servicios</h2><p>Soluciones confiables para fábricas y obras.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Soldadura y estructuras metálicas</h3><p>Soldadura MIG/TIG, fabricación metálica, soporte en estructuras y trabajo técnico.</p></div>
+        <div class="card"><h3>Soporte a fábricas</h3><p>Apoyo operativo, producción, organización de trabajo y soporte en planta.</p></div>
+        <div class="card"><h3>Mantenimiento industrial</h3><p>Mantenimiento preventivo, reparación y soporte de instalaciones industriales.</p></div>
+        <div class="card"><h3>Subcontratación</h3><p>Trabajos por encargo con responsabilidad, estabilidad y eficiencia.</p></div>
+        <div class="card"><h3>Reclutamiento</h3><p>Apoyo en búsqueda de técnicos, operarios y personal adecuado para cada proyecto.</p></div>
+        <div class="card"><h3>Construcción y reformas</h3><p>Apoyo en interiores, exteriores, reparaciones, demolición y obras.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PORTUGUESE -->
+<div class="content" id="pt">
+  <div class="hero">
+    <h1>Suporte Industrial<br>com Qualidade e Compromisso</h1>
+    <p>A Seishin Service LLC apoia fábricas, obras e projetos industriais no Japão com soldagem, estruturas metálicas, manutenção e suporte de pessoal.</p>
+    <a class="btn" href="mailto:info@seishin-service.jp">Contato</a>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="title"><h2>Serviços</h2><p>Soluções confiáveis para ambientes industriais.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Soldagem e estruturas metálicas</h3><p>Soldagem MIG/TIG, fabricação metálica e suporte técnico.</p></div>
+        <div class="card"><h3>Suporte a fábricas</h3><p>Apoio operacional, produção e serviços em planta.</p></div>
+        <div class="card"><h3>Manutenção industrial</h3><p>Manutenção preventiva, reparos e melhoria de instalações.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- THAI -->
+<div class="content" id="th">
+  <div class="hero">
+    <h1>บริการสนับสนุนอุตสาหกรรม<br>ด้วยคุณภาพและความจริงใจ</h1>
+    <p>Seishin Service LLC ให้บริการสนับสนุนโรงงาน งานเชื่อม โครงสร้างเหล็ก งานบำรุงรักษา และการสนับสนุนบุคลากรในประเทศญี่ปุ่น</p>
+    <a class="btn" href="mailto:info@seishin-service.jp">ติดต่อเรา</a>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="title"><h2>บริการ</h2><p>บริการที่เชื่อถือได้สำหรับโรงงานและงานอุตสาหกรรม</p></div>
+      <div class="grid">
+        <div class="card"><h3>งานเชื่อมและโครงสร้างเหล็ก</h3><p>งานเชื่อม MIG/TIG งานโลหะ และงานสนับสนุนภาคสนาม</p></div>
+        <div class="card"><h3>สนับสนุนโรงงาน</h3><p>ช่วยงานผลิต งานปฏิบัติการ และการสนับสนุนในโรงงาน</p></div>
+        <div class="card"><h3>บำรุงรักษาอุตสาหกรรม</h3><p>บำรุงรักษา ซ่อมแซม และสนับสนุนอุปกรณ์อุตสาหกรรม</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- VIETNAMESE -->
+<div class="content" id="vi">
+  <div class="hero">
+    <h1>Hỗ trợ công nghiệp<br>với chất lượng và trách nhiệm</h1>
+    <p>Seishin Service LLC hỗ trợ nhà máy, công trình và dự án công nghiệp tại Nhật Bản thông qua hàn, kết cấu thép, bảo trì và hỗ trợ nhân sự.</p>
+    <a class="btn" href="mailto:info@seishin-service.jp">Liên hệ</a>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="title"><h2>Dịch vụ</h2><p>Giải pháp đáng tin cậy cho môi trường công nghiệp.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Hàn và kết cấu thép</h3><p>Hàn MIG/TIG, gia công kim loại và hỗ trợ kỹ thuật tại công trường.</p></div>
+        <div class="card"><h3>Hỗ trợ nhà máy</h3><p>Hỗ trợ sản xuất, vận hành và công việc trong nhà máy.</p></div>
+        <div class="card"><h3>Bảo trì công nghiệp</h3><p>Bảo trì phòng ngừa, sửa chữa và hỗ trợ thiết bị công nghiệp.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>© 2026 合同会社 誠心サービス | SEISHIN SERVICE LLC</p>
+  <p>seishin-service.jp | info@seishin-service.jp</p>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang button').forEach(el => el.classList.remove('active'));
+
+    const section = document.getElementById(lang) || document.getElementById('ja');
+    section.classList.add('active');
+
+    const btn = document.getElementById('btn-' + lang);
+    if(btn) btn.classList.add('active');
+
+    localStorage.setItem('seishin_lang', lang);
+  }
+
+  const saved = localStorage.getItem('seishin_lang');
+  const browser = navigator.language.toLowerCase();
+
+  let lang = saved || 'ja';
+
+  if(!saved){
+    if(browser.startsWith('en')) lang = 'en';
+    else if(browser.startsWith('es')) lang = 'es';
+    else if(browser.startsWith('pt')) lang = 'pt';
+    else if(browser.startsWith('th')) lang = 'th';
+    else if(browser.startsWith('vi')) lang = 'vi';
+    else lang = 'ja';
+  }
+
+  setLang(lang);
+</script>
+
 </body>
 </html>
