@@ -237,23 +237,38 @@
       .about{grid-template-columns:1fr}
       nav a{display:inline-block;margin-bottom:8px}
     }
+    
+    .header-logo{
+  text-align:center;
+  background:white;
+  padding:20px;
+}
+
+.header-logo img{
+  max-width:350px;
+  width:90%;
+  height:auto;
+}
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">
-  <img src="Logo.PNG" alt="Seishin Service Logo" style="height:160px;">
-</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">Company</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- LOGO -->
+  <div class="header-logo">
+    <img src="Logo.PNG" alt="SEISHIN SERVICE LLC">
   </div>
 
+  <!-- MENÚ -->
+  <nav class="main-nav">
+    <a href="#services">Services</a>
+    <a href="#about">Company</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- IDIOMAS -->
   <div class="lang-buttons">
     <button onclick="showLang('ja')" id="btn-ja">日本語</button>
     <button onclick="showLang('en')" id="btn-en">English</button>
@@ -262,6 +277,7 @@
     <button onclick="showLang('th')" id="btn-th">ไทย</button>
     <button onclick="showLang('vi')" id="btn-vi">Tiếng Việt</button>
   </div>
+
 </header>
 
 <!-- JAPANESE -->
