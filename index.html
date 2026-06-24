@@ -168,7 +168,35 @@
       gap:35px;
       align-items:start;
     }
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:20px;
+}
 
+.feature{
+    background:#0d2c54;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    border-radius:12px;
+    font-weight:700;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.contact-box{
+    background:#0d2c54;
+    color:white;
+    padding:25px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.contact-box h2{
+    color:white;
+    margin-bottom:10px;
+}
     .info-table{
       width:100%;
       border-collapse:collapse;
@@ -597,13 +625,28 @@
 </section>
 
   <section>
-    <div class="container features">
-      <div class="feature">Seguridad primero</div>
-      <div class="feature">Calidad</div>
-      <div class="feature">Responsabilidad</div>
-      <div class="feature">Soporte multilingüe</div>
+  <div class="container features professional-features">
+    <div class="feature">
+      <div class="feature-icon">盾</div>
+      <strong>Seguridad primero</strong>
     </div>
-  </section>
+
+    <div class="feature">
+      <div class="feature-icon">品</div>
+      <strong>Calidad</strong>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">信</div>
+      <strong>Responsabilidad</strong>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">言</div>
+      <strong>Soporte multilingüe</strong>
+    </div>
+  </div>
+</section>
 
   <section>
     <div class="container contact-box">
